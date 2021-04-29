@@ -1,0 +1,345 @@
+.login{
+    background-color: #F8F8FA;
+}
+
+.login_banner{
+    width: 100%;
+    height: 1000px;
+    background-image: url(../img/login_banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -80px;
+}
+.login_banner_inner{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 127px;
+}
+
+.kuli{
+    width: 300px;
+    float: left;
+}
+.kuli img{
+    width: 95%;
+}
+
+.cl{
+    width: 260px;
+    float: right;
+}
+.cl img{
+    width: 100%;
+    float: right;
+}
+
+.login_form{
+    margin-top: -40px;
+    float: left;
+    margin-left: 70px;
+}
+.login_form ul{
+    width: 268px;
+    height: 46px;
+    border-radius: 25px;
+    border: 1px solid;
+    margin: 0 auto;
+}
+.login_form ul li{
+    float: left;
+    width: 134px;
+    height: 47px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 46px;
+    cursor: pointer;
+    margin-top: -0.5px;
+}
+
+.login_form_inner{
+    width: 398px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    margin-top: 30px;
+    padding: 28px 36px;
+}
+.login_form_inner h5{
+    text-align: center;
+    font-size: 20px;
+}
+.login_form_inner .el-form-item{
+    position: relative;
+    margin-bottom: 0;
+}
+.login_form_inner .el-form-item i{
+    position: absolute;
+    top:15px;
+    left: 16px;
+    font-size: 17px;
+    color: #8A8A8A;
+    height: 44px;
+    line-height: 44px;
+}
+.login_form_inner .el-input input{
+    height: 44px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: #F3F3F3;
+    border: none;
+    padding-left: 46px;
+}
+.login_form_inner .el-textarea__inner{
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: #F3F3F3;
+    border: none;
+    padding: 12px 10px 12px 46px;
+}
+.login_form_inner .code{
+    width: calc(100% - 2px);
+    height: 48px;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 1px #F3F3F3 solid;
+}
+.geetest_radar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #C6D5F8;
+    float: left;
+    border: 1px solid #3873ff;
+}
+.geetest_dot{
+    width: 12px;
+    height: 12px;
+    margin: 9px;
+    background-color: #3873ff;
+    border-radius: 50%;
+}
+.login_form_inner .code span{
+    line-height: 50px;
+    margin-left: 6px;
+}
+.login_form_inner .code_success{
+    color: #26C267;
+    border-color: #26C267;
+    cursor: default;
+    background-color: #EEFFF5;
+}
+.login_form_inner .code_success i{
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+.login_form_other{
+    margin-top: 22px;
+}
+.login_form_other span{
+    line-height: 22px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.login_form_other span:first-child{
+    float: left;
+}
+.login_form_other i{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    float: left;
+    border-radius: 50%;
+    margin-right: 6px;
+    font-size: 25px;
+    display: flex;
+}
+.login_form_other i:before{
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+.login_form_btn{
+    margin-top: 38px;
+}
+.login_form_btn .el-button{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+}
+
+/* 注册 */
+.login_form_inner .obtain_code{
+    width: 120px;
+    line-height: 44px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+.login_form_inner .obtain_code::before{
+    content: '';
+    width: 1px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* 主体 */
+.login_main{
+    width: 1200px;
+    margin: -160px auto 0;
+    padding-bottom: 60px;
+}
+.login_title{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login_main h4{
+    font-size: 28px;
+    text-align: center;
+    color: #757475;
+}
+
+.extension{
+    margin-top: 64px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.extension ul li{
+    text-align: center;
+    float: left;
+    margin: 0 15px;
+    width: 374px;
+}
+.extension ul li:last-child{
+    margin-right: 0;
+}
+.extension ul li:first-child img,
+.extension ul li:last-child img{
+    margin-top: 46px;
+    margin-bottom: 23px;
+}
+.extension ul li:nth-child(2) img{
+    margin-bottom: 23px;
+}
+.extension ul li h3{
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+.extension ul li p{
+    color: #757475;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+
+.mach_live{
+    margin-top: 82px;
+    text-align: center;
+}
+.mach_live h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.mach_live p{
+    font-size: 18px;
+    color: #757475;
+    line-height: 32px;
+}
+
+.play_game{
+    margin-top: 47px;
+    margin-bottom: 22px;
+}
+.play_game ul li:first-child{
+    float: left;
+}.play_game ul li:last-child{
+    float: right;
+}
+.play_game ul li h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.play_game ul li p{
+    font-size: 18px;
+    color: #757475;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 26px;
+    margin-top: 20px;
+}
+
+
+.guessing_competition{
+    width: 100%;
+    margin-top: 43px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.guessing_competition ul li{
+    width: 480px;
+    height: 512px;
+    float: left;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.guessing_competition ul li:first-child{
+    background-image: url(../img/guessing_competition_img1.png);
+}
+.guessing_competition ul li:last-child{
+    background-image: url(../img/guessing_competition_img2.png);
+}
+.guessing_competition ul li h5{
+    font-size: 28px;
+    margin-top: 311px;
+    margin-bottom: 24px;
+}
+.guessing_competition ul li p{
+    font-size: 18px;
+    color: #757475;
+}

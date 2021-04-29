@@ -1,0 +1,459 @@
+/* 提现专区 */
+.withdraw .inner{
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .04);
+}
+
+.withdraw .head{
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+}
+.withdraw .head i{
+    font-size: 24px;
+    float: left;
+    padding-left: 18px;
+    margin-right: 6px;
+}
+.withdraw .head h5{
+    font-size: 16px;
+}
+
+.withdraw .main{
+    background-color: #fff;
+    padding: 0px 0 30px 18px;
+    border-radius: 0 0 5px 5px;
+}
+.withdraw .main p{
+    font-size: 14px;
+    color: #a5a9b3;
+    line-height: 50px;
+    height: 50px;
+}
+.withdraw .main h2{
+    line-height: 50px;
+    margin-top: 6px;
+    font-size: 44px;
+    font-weight: bold;
+    color: #414755;
+}
+.withdraw .main h4{
+    font-size: 24px;
+    font-weight: bold;
+    color: #a5a9b3;
+    height: 28px;
+    line-height: 28px;
+}
+.withdraw .main i{
+    vertical-align: middle;
+    margin-left: 6px;
+}
+.withdraw .main .el-button{
+    margin-top: 20px;
+    width: 126px;
+    height: 38px;
+    border-radius: 25px;
+    display: block;
+    text-align: center;
+}
+
+/* 提款说明 */
+.drawing_explain{
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 20px;
+}
+.drawing_explain i{
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.drawing_explain .el-link{
+    font-size: 12px;
+}
+
+/* 提款专区-提款 */
+.drawing{
+    position: relative;
+}
+.input_money .el-row:first-child{
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+}
+.input_money .el-row:first-child span{
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #414755;
+    display: inline-block;
+}
+.input_money .el-row:first-child h5{
+    font-size: 24px;
+    font-weight: bold;
+}
+.input_money .el-row:nth-child(2){
+    color: #414755;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.input_money .el-row:nth-child(3){
+    position: relative;
+    margin-bottom: 20px;
+}
+.input_money .el-row .el-input{
+    width: 256px;
+    float: left;
+}
+.input_money span.whole{
+    position: absolute;
+    top: 48%;
+    left: 210px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.input_money .el-row p{
+    line-height: 40px;
+    margin-left: 20px;
+    float: left;
+    color: #a5a9b3;
+    font-size: 14px;
+}
+.input_money .el-button{
+    width: 256px;
+}
+
+.input_money_table{
+    margin-top: 24px;
+}
+.input_money_table h3{
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: #414755;
+    font-weight: bold;
+}
+.input_money_table h3 span{
+    float: right;
+    font-size: 16px;
+    line-height: 60px;
+    font-weight: initial;
+    cursor: pointer;
+}
+
+
+/* 安全验证 */
+.safety_verification{
+    position: relative;
+}
+
+.withdraw_infor{
+    width: 100%;
+    height: 96px;
+    border: solid 1px #ebedf0;
+    padding-left: 18px;
+}
+.withdraw_infor h3{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 96px;
+    float: left;
+}
+.withdraw_infor h3 span{
+    color: #a5a9b3;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 6px;
+    float: right;
+}
+.withdraw_infor span{
+    color: #a5a9b3;
+    font-size: 14px;
+    float: left;
+    line-height: 102px;
+}
+
+.bank_list{
+    margin: 20px 0;
+}
+.bank_list thead td, .bank_list thead th {
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    padding-left: 20px;
+}
+.bank_list table{
+    border: solid 1px #ebedf0;
+}
+.bank_list table tbody tr:hover{
+    background-color: #f5f7fa;
+}
+.bank_list table tbody tr:last-child:hover{
+    background-color: initial;
+}
+.bank_list th{
+    height: 54px;
+    color: #414755;
+}
+.bank_list th i{
+    margin-left: 6px;
+    font-size: 14px;
+}
+.bank_list td{
+    height: 70px;
+    padding-left: 20px;
+}
+
+.bank_list td > div{
+    display: flex;
+    align-items: center;
+}
+.bank_list td .bank_img{
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    background: rgba(235, 239, 247, .5);
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.bank_list td span{
+    float: left;
+    cursor: pointer;
+    margin-right: 30px;
+    line-height: 70px
+}
+.bank_list td i{
+    float: left;
+    line-height: 70px;
+    cursor: pointer;
+}
+
+.withdraw_btn .el-button{
+    width: 256px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.payment_password{
+    margin-bottom: 20px;
+}
+.payment_password p{
+    height: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #414755;
+    margin-bottom: 10px;
+}
+.payment_password .el-input{
+    width: 256px;
+    float: left;
+}
+.payment_password span{
+    float: left;
+    margin-left: 15px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.add_bank_form{
+    margin-bottom: 10px;
+}
+.add_bank_form ul li{
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+}
+.add_bank_form ul li:last-child{
+    margin-right: 0;
+}
+.add_bank_form ul li p{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.add_bank_form ul li span.bank_num{
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #DCDFE6;
+    box-sizing: border-box;
+    color: #bbb;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 38px;
+    outline: 0;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+    background-color: #f5f7fa;
+}
+
+.recently_used_card h5{
+    font-size: 14px;
+    font-weight: bold;
+    color: #414755;
+    height: 62px;
+    line-height: 62px;
+}
+.recently_used_card .no_card{
+    text-align: center;
+    padding: 16px;
+}
+.recently_used_card .no_card i{
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #e0e2e7;
+    border-radius: 50%;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+}
+.recently_used_card .no_card p{
+    margin-top: 10px;
+    height: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+.recently_used_card ul li{
+    float: left;
+    width: 118px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 5px;
+    border: 1px #ddd solid;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.recently_used_card ul li:nth-child(5n+5){
+    margin-right: 0;
+}
+.recently_used_card ul li img{
+    vertical-align: middle;
+    margin: 0 14px 0 10px;
+}
+.recently_used_card ul li i{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 22px;
+    color: #bfbfbf;
+    background-color: #fff;
+}
+
+.withdraw_code{
+    position: relative;
+}
+.withdraw_code p{
+    text-align: center;
+    margin-bottom: 12px;
+}
+.withdraw_code .el-input{
+    width: 100%;
+}
+.withdraw_code span.code{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.withdraw_code span.code::before{
+    content: '';
+    width: 1px;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #DCDFE6;
+}
+
+
+/* 会员代存和彩金赠送 */
+.agent_deposit h5{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #414755;
+    line-height: 40px;
+}
+.agent_deposit .el-row{
+    margin-bottom: 20px;
+}
+.agent_deposit .el-radio-button__inner{
+    padding: 12px 18px;
+}
+
+.payment_account{
+    width: 215px;
+    height: 86px;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .04);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .04);
+    border: solid 1px;
+    background-color: white;
+    padding: 26px 0 0 20px;
+}
+.payment_account p{
+    font-size: 16px;
+}
+.payment_account h2{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 44px;
+}
+
+.agent_deposit_form .el-input{
+    width: 256px;
+}
+
+.agent_deposit ul.money{
+    width: 100%;
+    height: 42px;
+    margin-bottom: 20px;
+    display: block;
+}
+.agent_deposit ul.money li{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    border: solid 1px #cccccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.agent_deposit_form .el-button{
+    width: 256px;
+    margin-top: 10px;
+}
+
+.agent_deposit .head .el-button{
+    width: 100px;
+}

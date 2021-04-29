@@ -1,0 +1,137 @@
+/* 会员管理 */
+.memberManage .el-table td{
+    border-bottom: none;
+}
+
+/* 会员转线申请 */
+.memberLineApply_top{
+    padding-bottom: 30px;
+    border-bottom: 1px #EFEFEF solid;
+}
+.memberLineApply_top_list{
+    height: 120px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .04);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .04);
+    border: solid 1px #eee;
+    background-color: #fff;
+    position: relative;
+}
+.memberLineApply_top_list p{
+    margin: 26px 0 0 20px;
+    font-size: 16px;
+    color: #717783;
+    height: 22px;
+    line-height: 22px;
+}
+.memberLineApply_top_list h4,
+.memberLineApply_top_list i{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    margin: 10px 0 0 20px;
+    color: #414755;
+    font-size: 30px;
+}
+.memberLineApply_top_list .el-button{
+    position: absolute;
+    right: 20px;
+    top: 62px;
+}
+
+/* 申请信息 */
+.memberApply_form{
+    margin-top: 25px;
+}
+.memberApply_form h4{
+    height: 22px;
+    line-height: 22px;
+    color: #414755;
+    opacity: 0.8;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+.memberApply_form h4 b{
+    color: #666;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 22px;
+    font-style: initial;
+    font-weight: initial;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.memberApply_form h4 span{
+    font-size: 12px;
+    opacity: 0.4;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.memberApply_form .el-form{
+    width: 450px;
+}
+.memberApply_form .hide div.el-upload--picture-card {
+    display: none;
+}
+
+.memberApply_form .el-date-editor.el-input{
+    width: 100%;
+}
+
+.memberApply_form .el-dialog__header{
+    height: 24px;
+}
+.memberApply_form .el-dialog__body{
+    max-height: 600px;
+    text-align: center;
+}
+.memberApply_form .el-dialog__body img{
+    width: auto;
+}
+
+/* 备注说明 */
+.remarks h4{
+    margin-bottom: 10px;
+    color: #606266;
+}
+.remarks p{
+    line-height: 26px;
+    color: #606266;
+    font-size: 14px;
+}
+
+/* 会员账号 */
+.chec_user_main{
+    width: 500px;
+    height: 236px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 50px;
+}
+.chec_user_main p{
+    font-size: 20px;
+    line-height: 196px;
+    color: #afafaf;
+}
+.chec_user_main p i.icon-bi{
+    font-size: 22px;
+    margin-right: 10px;
+}
+.chec_user_main i{
+    font-size: 78px;
+}
+.chec_user_main i.el-icon-info{
+    font-size: 22px;
+    margin-left: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.chec_user_main h5{
+    font-size: 20px;
+    margin-top: 30px;
+    color: #afafaf;
+    line-height: 28px;
+}

@@ -1,0 +1,39 @@
+/* 游戏记录和存提款记录 */
+.gameRecord .el-range-editor.el-input__inner{
+    width: 100%;
+}
+.gameRecord .el-radio-group{
+    vertical-align: top
+}
+.gameRecord .el-button{
+    width: 100px;
+}
+
+.gameRecord .el-table--border, .el-table--group{
+    border: none;
+}
+.gameRecord .el-table::before,
+.gameRecord .el-table--border::after, 
+.gameRecord .el-table--group::after{
+    background-color: initial;
+}
+.gameRecord .el-table--border td{
+    border: none;
+}
+
+.gameRecord .match_type{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* 会员投注详情 */
+.memberBetDetails .el-row{
+    margin-top: 30px;
+}
+.memberBetDetails td{
+    font-size: 12px;
+}
+.memberBetDetails td,
+.memberBetDetails th{
+    text-align: center;
+}

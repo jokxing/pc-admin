@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fix {
+    *zoom: 1;
+}
+.fix:after {
+    display: block;
+    content: "clear";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+body,html{
+    background-color: #F0F2F5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: 500
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.el-tooltip__popper.is-dark{
+    white-space:pre
+}
+
+.el-table thead,
+.el-table{
+    color: #000;
+}
+.el-table th{
+    font-weight: initial!important;
+    font-size: 16px;
+}
+.el-table th.gutter{
+    display: block!important;
+}
+.el-table i{
+    font-size: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    color: #686868;
+}
+
+.el-table__row a{
+    color: var(--primary);
+}
+
+.el-pagination{
+    text-align: right;
+    margin-top: 20px;
+}
+
+.el-upload--picture-card,
+.el-upload-list--picture-card .el-upload-list__item{
+    width: 130px;
+    height: 130px;
+}
+
+.el-select{
+    width: 100%;
+}
+
+.el-page-header{
+    margin-bottom: 30px;
+}
+
+.el-date-editor--daterange.el-input__inner{
+    width: 100%;
+}
+.form_button .el-button{
+    width: 100px;
+}
+
+.el-dialog__header span,
+.el-dialog__header i{
+    color: #fff!important;
+}
+
+.primary-button{
+    border: 0;
+}
+
+#notice_table tr{
+    background-color: #fff!important;
+}
+
+/* 字体颜色 */
+.red{
+    color: red!important;
+}
+.green{
+    color: green!important;
+}
+.yellow{
+    color: #ff8d00!important;
+}
+.grey{
+    color: #a2a2a2!important;
+}
+.pink{
+    color: #e4b2b4!important
+}
+.blue{
+    color: #3F51B5!important;
+}
+.violet{
+    color: #9C27B0!important;
+}
+
+/* 背景颜色 */
+.orange_bg{
+    background-color: #ff6939!important;
+}
+.cyan_bg{
+    background-color: #05b7d3!important;
+}
+.blue_bg{
+    background-color: #008dff!important;
+}
+.green_bg{
+    background-color: #08b552!important;
+}
+
+
+:root{
+    --primary: #5C7DEC;
+    --lightBlue: #F1F4FF
+}
+.primary-color,
+.router-link-active,
+.router-link-active i,
+.list a.active,
+.el-pagination.is-background .el-pager li:not(.disabled):hover,
+.el-button--text,
+.el-radio-button__inner:hover,
+.el-select-dropdown__item.selected,
+.el-tabs__item.is-active,
+.el-tabs__item:hover,
+.el-link.el-link--default:hover,
+.recently_used_card ul li i:hover,
+.el-dropdown-menu__item:not(.is-disabled):hover,
+.el-checkbox__input.is-checked+.el-checkbox__label,
+.el-table i:hover{
+    color: var(--primary)!important;
+}
+.primary-bg,
+.router-link-active::after,
+.list a.active::after,
+.home_bot .el-tabs__item.is-active,
+.data_tab ul li.bor_active span,
+.el-tabs__active-bar,
+.login_form_inner .obtain_code::before,
+.el-dialog__header,
+.el-button--primary,
+.code span::before,
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background-color: var(--primary)!important;
+}
+.router-link-active,
+.list a.active,
+.el-table tr:nth-child(2n+2),
+.el-table__header-wrapper tr th,
+.bank_list thead{
+    background-color: var(--lightBlue)!important;
+}
+
+/* 选中的样式和主色按钮 */
+.tab_active,
+.primary-button,
+.el-pagination.is-background .el-pager li:not(.disabled).active,
+.btn_bor_primary:hover,
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
+    background-color: var(--primary)!important;
+    color: #fff!important;
+}
+.bor_active,
+.btn_bor_primary{
+    border-color: var(--primary)!important;
+    color: var(--primary)!important;
+}
+
+.primary-button:hover{
+    background-color: #859ce9!important;
+}
+.el-button--primary:hover{
+    background-color: #859ce9!important;
+    border-color: #859ce9!important;
+}
+
+/* 滑过的边框颜色 */
+.el-button.is-plain:hover,
+.el-button.is-active, 
+.el-button.is-plain:active,
+.el-button.is-plain:focus{
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* 滑过的字体颜色 */
+.el-button--text:hover{
+    color: #8ca4f3!important;
+}
+
+/* 边框颜色 */
+.bor_primary,
+.el-select .el-input.is-focus .el-input__inner,
+.el-input.is-active .el-input__inner, 
+.el-input__inner:focus,
+.el-radio-button__orig-radio:checked+.el-radio-button__inner,
+.agent_deposit .payment_account,
+.login_form ul,
+.login_form_other i,
+.el-button--primary,
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-checkbox__inner:hover,
+.el-checkbox__input.is-focus .el-checkbox__inner{
+    border-color: var(--primary)!important;
+}
+
+/* 阴影 */
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
+    box-shadow: -1px 0 0 0 var(--primary);
+}
+
+/* 标题 */
+.title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.agent_subordinate .el-button{
+    width: 126px;
+    padding: 10px 8px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    float: right;
+}
+.agent_subordinate .el-button span{
+    float: none;
+    margin-right: 0;
+}
+.agent_subordinate .el-button i{
+    font-size: 18px;
+}
+
+/* 温馨提示 */
+.reminder .el-dialog__body{
+    text-align: center;
+}
+.reminder .el-button{
+    width: 140px;
+}
+
+
+/* 标题下面tab */
+.notice_tab{
+    border-bottom: 1px #eee solid;
+    margin-bottom: 30px;
+}
+.notice_tab .el-col{
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+.notice i{
+    font-size: 20px;
+}
+
+.notice .el-table::before{
+    height: 0;
+}
