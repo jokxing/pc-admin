@@ -1,6 +1,6 @@
 <template>
     <div class="commission_report" v-loading="showLoading">
-        <h4 class="title">佣金报表</h4>
+        <h4 class="title">财务报表</h4>
 
         <div v-for="(item, index) in list" :key="index" class="commission_box">
             <el-row class="commission_title">
@@ -14,9 +14,9 @@
                     <div>
                         <p>
                             <i class="iconfont icon-qiandaizi yellow"></i>
-                            当月佣金
+                            当月财务
                             <el-tooltip placement="top" class="item">
-                                <div slot="content" style="font-size: 14px;line-height: 24px">每月2-5日发放上月佣金<br />当月佣金=实际盈亏*佣金比例+会员代存+上月结余+开客奖励+额外奖励<br/>正数为代理欠公司，负数为代理盈利。</div>
+                                <div slot="content" style="font-size: 14px;line-height: 24px">内容内容<br />内容内容内容内容内容内容内容内容内容内容内容内容<br/>内容内容内容内容内容内容内容内容</div>
                                 <i class="el-icon-info"></i>
                             </el-tooltip>
                         </p>
@@ -37,8 +37,8 @@
                     <div>
                         <p>
                             <i class="iconfont icon-16 yellow"></i>
-                            实际盈亏
-                            <el-tooltip class="item" effect="dark" content="会员输赢+红利/返水+手续费+平台费" placement="top">
+                            实际收益
+                            <el-tooltip class="item" effect="dark" content="内容内容内容内容内容内容内容内容" placement="top">
                                 <i class="el-icon-info"></i>
                             </el-tooltip>
                         </p>
@@ -57,7 +57,7 @@
                 </el-col>
             </el-row>
 
-            <!-- 当月佣金 -->
+            <!-- 当月财务 -->
             <el-row class="commission_table" v-show="item.showMoney">
                 <el-table
                     :data="item.moneyList"
@@ -65,7 +65,7 @@
                     style="width: 100%">
                     <el-table-column
                         prop="profit"
-                        label="实际盈亏">
+                        label="实际收益">
                         <template slot-scope="scope">
                             <span :class="{ red: scope.row.profit < 0, green: scope.row.profit > 0}">
                                 {{ scope.row.profit }}
@@ -74,7 +74,7 @@
                     </el-table-column>
                     <el-table-column
                         prop="rate"
-                        label="佣金比例">
+                        label="财务比例">
                     </el-table-column>
                     <el-table-column
                         prop="last_balance"
@@ -107,12 +107,6 @@
                         align="center"
                         v-if="level_id == 3 && bill_wtd">
                         <el-table-column 
-                            prop="invite_back_reward"
-                            label="返佣"
-                            align="center"
-                            width="60">
-                        </el-table-column>
-                        <el-table-column 
                             prop="invite_correction"
                             label="人头奖励"
                             align="center"
@@ -130,7 +124,7 @@
                         label="会员代存">
                     </el-table-column>
                     <el-table-column
-                        label="当月佣金">
+                        label="当月财务">
                         <template slot-scope="scope">
                             <span :class="{ red: scope.row.money < 0, green: scope.row.money > 0}">
                                 {{ scope.row.money }}
@@ -146,19 +140,15 @@
                 <div class="distribution_time">发放时间<span>{{ item.created_at }}</span></div>
             </el-row>
 
-            <!-- 实际盈亏 -->
+            <!-- 实际收益 -->
             <el-row class="commission_table" v-show="item.showProfit">
                 <el-table
                     :data="item.detail"
                     border
                     style="width: 100%">
                     <el-table-column
-                        prop="code"
-                        label="代理账号">
-                    </el-table-column>
-                    <el-table-column
                         prop="payout"
-                        label="会员输赢">
+                        label="实际2">
                             <template slot-scope="scope">
                                 <span :class="{ 'green': scope.row.payout > 0, 'red': scope.row.payout < 0 }">
                                     {{ scope.row.payout }}
@@ -166,26 +156,26 @@
                             </template>
                     </el-table-column>
                     <el-table-column
-                        label="红利/返水"
+                        label="实际3"
                         :render-header="bonusHeader">
                         <template slot-scope="scope">
-                            <span>{{ (scope.row.bonus_money + scope.row.agent_bonus + scope.row.user_agent + scope.row.uservip_system + scope.row.bonus_system + scope.row.dpt_bonus_money + scope.row.water_money).toFixed(2) }}</span>
+                            <span>{{ (scope.row.bonus_money + scope.row.agent_bonus + scope.row.user_agent).toFixed(2) }}</span>
                             <i class="iconfont primary-color" :class="{ 'icon-plus': !showBonus[index], 'icon-reduce': showBonus[index] }" style="float:right" @click="bonusClick(index)"></i>
                         </template>
                     </el-table-column>
                     <el-table-column
                         prop="fee"
-                        label="手续费"
+                        label="实际4"
                         :render-header="feeHeader">
                     </el-table-column>
                     <el-table-column
-                        label="平台费">
+                        label="实际5">
                         <template slot-scope="scope">
                             <span>{{ scope.row.game_fee }}</span>
                         </template>
                     </el-table-column>
                     <el-table-column
-                        label="实际盈亏"
+                        label="实际6"
                         :render-header="realHeader">
                             <template slot-scope="scope">
                                 <span :class="{ 'green': scope.row.real_win_lost > 0, 'red': scope.row.real_win_lost < 0 }">
@@ -210,31 +200,15 @@
                     v-show="item.showBonus">
                     <el-table-column
                         prop="bonus_money"
-                        label="红利">
+                        label="实际3-1">
                     </el-table-column>
                     <el-table-column
                         prop="agent_bonus"
-                        label="代理彩金">
+                        label="实际3-2">
                     </el-table-column>
                     <el-table-column
                         prop="user_agent"
-                        label="邀请有奖">
-                    </el-table-column>
-                    <el-table-column
-                        prop="uservip_system"
-                        label="VIP系统">
-                    </el-table-column>
-                    <el-table-column
-                        prop="bonus_system"
-                        label="彩金系统">
-                    </el-table-column>
-                    <el-table-column
-                        prop="dpt_bonus_money"
-                        label="存款优惠">
-                    </el-table-column>
-                    <el-table-column
-                        prop="water_money"
-                        label="返水">
+                        label="实际3-3">
                     </el-table-column>
                 </el-table>
                 <!-- 其它表格 -->
@@ -245,27 +219,15 @@
                     v-show="item.showOther">
                     <el-table-column
                         prop="beat_num"
-                        label="注单笔数">
+                        label="其它1">
                     </el-table-column>
                     <el-table-column
                         prop="beat_money"
-                        label="投注金额">
+                        label="其它2">
                     </el-table-column>
                     <el-table-column
                         prop="valid_betamt"
-                        label="有效投注">
-                    </el-table-column>
-                    <el-table-column
-                        prop="dpt_money"
-                        label="存款金额">
-                    </el-table-column>
-                    <el-table-column
-                        prop="wtd_money"
-                        label="提款金额">
-                    </el-table-column>
-                    <el-table-column
-                        prop="valid_user"
-                        label="本月有效客">
+                        label="其它3">
                     </el-table-column>
                 </el-table>
             </el-row>

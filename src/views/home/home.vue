@@ -19,7 +19,7 @@
                     </p>
                     <span>
                         有效会员(本月) 
-                        <el-tooltip class="item" effect="dark" content="本月注册，存款500以上，流水2000以上" placement="bottom">
+                        <el-tooltip class="item" effect="dark" content="内容内容" placement="bottom">
                             <i class="el-icon-info"></i>
                         </el-tooltip>
                     </span>
@@ -33,7 +33,7 @@
                     </p>
                     <span>
                         活跃人数(本月)  
-                        <el-tooltip class="item" effect="dark" content="本月登录过的玩家" placement="bottom">
+                        <el-tooltip class="item" effect="dark" content="本月登录过的会员" placement="bottom">
                             <i class="el-icon-info"></i>
                         </el-tooltip>
                     </span>
@@ -46,8 +46,8 @@
                         {{ homeData.payout }}
                     </p>
                     <span class="primary-bg">
-                        实际盈亏 
-                        <el-tooltip class="item" effect="dark" content="负数代表玩家输钱，正数代表玩家赢钱" placement="bottom">
+                        实际收益
+                        <el-tooltip class="item" effect="dark" content="内容内容" placement="bottom">
                             <i class="el-icon-info" style="color: #fff"></i>
                         </el-tooltip>
                     </span>
@@ -76,7 +76,7 @@
             <!-- 金额和人数Tab -->
             <div class="money_tab">
                 <el-tooltip class="item" effect="dark" placement="right">
-                    <div slot="content" style="line-height: 18px;">新注册存款金额：时间段内注册用户的累<br />计存款金额<br />老用户存款金额：所选时间之前注册用户,<br />在当前所选时间内存款的金额<br />首存金额：所选时间内注册用户的首次存<br />款金额<br />总存款金额：所选时间内用户的累计存款<br />金额<br />投注金额：所选时间内用户的累计投注金<br />额<br />有效投注：所选时间内用户的累计有效投<br />注金额<br />输赢：所选时间内用户的累计输赢
+                    <div slot="content" style="line-height: 18px;">标题：内容内容内容内容<br />内容内容<br />标题：内容内容内容内容,<br />内容内容<br />标题：内容内容<br />内容内容<br />标题：内容内容内容内容<br />内容内容<br />标题：内容内容<br />内容内容<br />标题：内容内容<br />内容内容<br />标题：内容内容内容内容
                     </div>
                     <i class="el-icon-info"></i>
                 </el-tooltip>
@@ -149,9 +149,9 @@
                         }
                     ]
                 },
-                dataTab: ['输赢金额','新注册人数','存提款金额','存提款人数','投注金额'],
+                dataTab: ['tab1','tab2','tab3','tab4','tab5'],
                 dataTabNum: 0,
-                dataTabName: "输赢金额",
+                dataTabName: "tab1",
                 // 首页-数据展示
                 homeData: {},
                 bill_wtd: false,
@@ -284,13 +284,13 @@
                             ]
                         }
                     }else{
-                        if(this.dataTabName == '存提款金额'){
+                        if(this.dataTabName == 'tab3'){
                             this.option = {
                                 tooltip: {
                                     trigger: 'axis',
                                 },
                                 legend: {
-                                    data:['取款金额','存款金额']
+                                    data:['金额1','金额2']
                                 },
                                 grid: {
                                     left: 0,
@@ -312,13 +312,13 @@
                                 },
                                 series: [
                                     {
-                                        name:'取款金额',
+                                        name:'金额1',
                                         type:'line',
                                         color: '#5C7DEC',
                                         data: this.homeDeport.draw,
                                     },
                                     {
-                                        name:'存款金额',
+                                        name:'金额2',
                                         type:'line',
                                         color: '#00c01c',
                                         data: this.homeDeport.dpt,
@@ -326,13 +326,13 @@
                                 ]
                             }
                         }
-                        if(this.dataTabName == '存提款人数'){
+                        if(this.dataTabName == 'tab4'){
                             this.option = {
                                 tooltip: {
                                     trigger: 'axis',
                                 },
                                 legend: {
-                                    data:['取款人数','存款人数']
+                                    data:['人数1','人数2']
                                 },
                                 grid: {
                                     left: 0,
@@ -354,13 +354,13 @@
                                 },
                                 series: [
                                     {
-                                        name:'取款人数',
+                                        name:'人数1',
                                         type:'line',
                                         color: '#5C7DEC',
                                         data: this.homeDeport.draw,
                                     },
                                     {
-                                        name:'存款人数',
+                                        name:'人数2',
                                         type:'line',
                                         color: '#00c01c',
                                         data: this.homeDeport.dpt,

@@ -4,7 +4,7 @@
             <el-row>
                 <el-col :span="24">
                     <div class="logo">
-                        <img src="../assets/img/login_logo.png">
+                        LOGO
                     </div>
                 </el-col>
             </el-row>
@@ -12,8 +12,8 @@
         <el-header height="80px" v-if="is_token == 1 && $route.path != '/login' && $route.path != '/register'">
             <el-row>
                 <el-col :span="4">
-                    <div class="logo">
-                        <img src="../assets/img/logo.png">
+                    <div class="logo" style="color: #333">
+                        LOGO
                     </div>
                 </el-col>
                 <el-col :span="20" class="right">
@@ -40,8 +40,8 @@
                         <li>
                             <i class="iconfont icon-cardb primary-color"></i>
                             <span>
-                                彩金余额
-                                <el-tooltip class="item" effect="dark" content="彩金余额-根据代理上个月的代理输赢数值的绝对值3.5%返，只能用于活动，不能用于非法提现。" placement="bottom">
+                                礼金余额
+                                <el-tooltip class="item" effect="dark" content="礼金余额-内容内容" placement="bottom">
                                     <i class="el-tooltip el-icon-info"></i>
                                 </el-tooltip>
                             </span>
@@ -127,6 +127,8 @@
     .header .logo{
         float: left;
         line-height: 80px;
+        font-size: 30px;
+        color: #fff;
     }
     .header .logo img{
         height: 55px;

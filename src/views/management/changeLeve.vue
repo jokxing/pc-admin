@@ -68,7 +68,6 @@
             top="20px"
             :before-close="handleClose"
             style="text-align: center;">
-            <img src="../../assets/img/level_contrast.png" style="width: 80%">
         </el-dialog>
     </div>
 </template>

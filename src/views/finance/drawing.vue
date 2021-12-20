@@ -64,8 +64,6 @@
                 </el-row>
             </el-tab-pane>
 
-            <el-tab-pane label="提款至虚拟币" name="usdt" style="text-align: center;margin-top: 200px;">暂未开放</el-tab-pane>
-
             <el-tab-pane label="提款记录" name="second">
                 <el-row :gutter="10">
                     <el-form>
@@ -146,7 +144,7 @@
                 tableLoading: true,
                 activeName: 'first',
                 // 可提余额
-                balance: $cookies.get('balance'),
+                balance: 2222222,
                 block: $cookies.get('block'),
                 // 提款
                 money: "",

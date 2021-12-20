@@ -15,7 +15,7 @@
                 width="182">
                 <template slot-scope="scope">
                     <div>
-                        <router-link :to="'/memberList?id=' + scope.row.id + '&Start=' + $route.query.Start + '&End=' + $route.query.End">
+                        <router-link :to="'/lowerLevelMemberList?id=' + scope.row.id + '&Start=' + $route.query.Start + '&End=' + $route.query.End">
                             {{ scope.row.code }} ({{ scope.row.realname }})
                         </router-link>
                     </div>

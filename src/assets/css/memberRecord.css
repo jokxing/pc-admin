@@ -1,4 +1,4 @@
-/* 游戏记录和存提款记录 */
+/* 存提款记录 */
 .gameRecord .el-range-editor.el-input__inner{
     width: 100%;
 }
@@ -24,16 +24,4 @@
 .gameRecord .match_type{
     cursor: pointer;
     text-decoration: underline;
-}
-
-/* 会员投注详情 */
-.memberBetDetails .el-row{
-    margin-top: 30px;
-}
-.memberBetDetails td{
-    font-size: 12px;
-}
-.memberBetDetails td,
-.memberBetDetails th{
-    text-align: center;
 }

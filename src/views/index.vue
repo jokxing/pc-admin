@@ -36,10 +36,6 @@
 <style scoped>
     .main{
         width: 100%;
-        background-image: url(../assets/img/main_bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top center;
         padding-bottom: 24px;
     }
     .inner{

@@ -1,5 +1,5 @@
 {
-  "name": "bm_admin",
+  "name": "pc_admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,6 +27,8 @@
     "@vue/cli-service": "~4.4.0",
     "babel-plugin-component": "^1.1.1",
     "compression-webpack-plugin": "^4.0.0",
+    "mocker-api": "^2.9.4",
+    "mockjs": "^1.1.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

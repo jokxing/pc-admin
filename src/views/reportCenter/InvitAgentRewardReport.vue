@@ -61,36 +61,25 @@
                     <el-table-column
                         prop="level"
                         label="级别"
-                        width="70">
+                        width="100">
                     </el-table-column>
                     <el-table-column
                         prop="profit"
-                        label="实际盈亏"
-                        width="120">
-                            <template scope="scope">
+                        label="实际收益"
+                        width="150">
+                            <template slot-scope="scope">
                                 <span :class="{ red: scope.row.profit < 0, green: scope.row.profit > 0}">{{ scope.row.profit }}</span>
                             </template>
                     </el-table-column>
                     <el-table-column
-                        prop="back_reward_rate"
-                        label="返佣比例">
-                    </el-table-column>
-                    <el-table-column
                         prop="vuser_num"
                         label="有效会员（本月）"
-                        width="150">
-                    </el-table-column>
-                    <el-table-column
-                        label="人头奖金">
-                            <template scope="scope">
-                                <span>{{ scope.row.vuser_reward_money }}</span>
-                            </template>
+                        width="180">
                     </el-table-column>
                     <el-table-column
                         prop="reward"
-                        label="推广收益（预算）"
-                        width="150">
-                            <template scope="scope">
+                        label="推广收益（预算）">
+                            <template slot-scope="scope">
                                 <span :class="{ red: scope.row.reward < 0, green: scope.row.reward > 0}">{{ scope.row.reward }}</span>
                             </template>
                     </el-table-column>

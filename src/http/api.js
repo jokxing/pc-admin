@@ -71,6 +71,15 @@ export const MemberListApi = data => {
     })
 }
 
+// 用户列表
+export const AgentMemberListApi = data => {
+    return Service({
+        url: api + '/AgentMemberList',
+        method: 'post',
+        data
+    })
+}
+
 // 点击调级的时候请求
 export const CheckChangeLeveApi = data => {
     return Service({
@@ -419,10 +428,10 @@ export const InvitAgentRewardReportApi = data => {
 // 推广网址
 export const ganeraAgentImportApi = data => {
     if(data){
-        data.bm = 1
+        data.pc = 1
     }else{
         var data = {
-            bm: 1
+            pc: 1
         }
     }
     return Service({
@@ -443,7 +452,7 @@ export const makeShortLinkApi = data => {
 
 // 推广素材
 export const generaAgentPopularizeApi = data => {
-    data.bm = 1
+    data.pc = 1
     return Service({
         url: api + "/generaAgentPopularize",
         method: "post",
@@ -523,22 +532,6 @@ export const agentEditInfoApi = data => {
     })
 }
 
-// 联系我们
-export const contact_usApi = data => {
-    if(data) {
-        data.bm = 1
-    }else{
-        var data = {
-            bm: 1
-        }
-    }
-    return Service({
-        url: api + "/contact_us",
-        method: "post",
-        data
-    })
-}
-
 // 回电服务
 export const backcallApi = data => {
     return Service({
@@ -551,10 +544,10 @@ export const backcallApi = data => {
 // 帮助中心
 export const supportCenterApi = data => {
     if(data){
-        data.bm = 1
+        data.pc = 1
     }else{
         var data = {
-            bm: 1
+            pc: 1
         }
     }
     return Service({

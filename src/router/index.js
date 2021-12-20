@@ -47,6 +47,14 @@ const routes = [
         component: resolve => require(['../views/management/memberList.vue'], resolve)
 			},
       { 
+        path:'/lowerLevelMemberList', 
+        name: 'lowerLevelMemberList',
+        meta:{
+          requireAuth: true,
+        },
+        component: resolve => require(['../views/management/lowerLevelMemberList.vue'], resolve)
+			},
+      { 
         path:'/checUser', 
         name: '会员注销查询',
         meta:{
@@ -109,25 +117,6 @@ const routes = [
         },
         component: resolve => require(['../views/management/threeLevelAgency.vue'], resolve)
       },
-      // 会员记录
-      { 
-        path:'/gameRecord', 
-        name: 'gameRecord',
-        meta:{
-          requireAuth: true,
-          level: ['1','2','3']
-        },
-        component: resolve => require(['../views/memberRecord/gameRecord.vue'], resolve)
-			},
-      { 
-        path:'/gameRecord/memberBetDetails', 
-        name: '会员投注详情',
-        meta:{
-          requireAuth: true,
-          level: ['1','2','3']
-        },
-        component: resolve => require(['../views/memberRecord/memberBetDetails.vue'], resolve)
-			},
       { 
         path:'/userFund', 
         name: '存提款记录',
@@ -173,7 +162,7 @@ const routes = [
 			},
       { 
         path:'/agentBonus', 
-        name: '彩票赠送',
+        name: '礼金赠送',
         meta:{
           requireAuth: true,
           level: ['3']
@@ -209,17 +198,8 @@ const routes = [
         component: resolve => require(['../views/reportCenter/threePayoutReport .vue'], resolve)
 			},
       { 
-        path:'/payoutReport/payoutDetailed', 
-        name: '输赢详细',
-        meta:{
-          requireAuth: true,
-          level: ['1','2', '3']
-        },
-        component: resolve => require(['../views/reportCenter/payoutDetailed.vue'], resolve)
-			},
-      { 
         path:'/commissionReport', 
-        name: '佣金报表',
+        name: '财务报表',
         meta:{
           requireAuth: true,
         },
@@ -309,15 +289,6 @@ const routes = [
     ]
   },
   { 
-    path:'/actingLottery', 
-    name: 'actingLottery',
-    meta:{
-      requireAuth: true,
-      level: ['1','2','3']
-    },
-    component: resolve => require(['../views/personalCenter/actingLottery.vue'], resolve)
-  },
-  { 
     path:'/login', 
     name: '登录',
     component: resolve => require(['../views/login/login.vue'], resolve)
@@ -336,15 +307,6 @@ const routes = [
       level: ['3']
     },
     component: resolve => require(['../views/promotionZone/generatePicture.vue'], resolve)
-  },
-
-  { 
-    path:'/supportCenter', 
-    name: '帮助中心',
-    meta:{
-      requireAuth: true,
-    },
-    component: resolve => require(['../views/personalCenter/supportCenter.vue'], resolve)
   },
 
   { 

@@ -135,7 +135,7 @@
                             _this.$message.error(err.message)
                         })
                     }
-                    if(this.name == '彩金'){
+                    if(this.name == '礼金'){
                         agentBonusApi(_this.data).then(res => {
                             _this.loading = false;
                             _this.$message.success(res.data.message);
@@ -150,8 +150,8 @@
         },
         mounted() {
             if(this.$router.history.current.path == '/agentBonus'){
-                this.title = "彩金赠送";
-                this.name = "彩金";
+                this.title = "礼金赠送";
+                this.name = "礼金";
                 var money = localStorage.getItem('cmoney')
                 this.money = JSON.parse(money).toFixed(2)
             }else{
@@ -176,8 +176,8 @@
             $route(to, from){
                 this.activeName = "first";
                 if(to.fullPath == '/agentBonus'){
-                    this.title = "彩票赠送";
-                    this.name = "彩金";
+                    this.title = "礼金赠送";
+                    this.name = "礼金";
                     var money = localStorage.getItem('cmoney')
                     this.money = JSON.parse(money).toFixed(2)
                 }else{

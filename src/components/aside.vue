@@ -1,8 +1,7 @@
 <template>
     <el-aside width="218px">
         <el-row class="sponsor">
-            <h5>赞助商</h5>
-            <img src="../assets/img/sponsor1.png">
+            <h5>logo</h5>
         </el-row>
         <el-row class="list list_home" v-if="isOne > 0">
             <router-link v-for="(item, index) in listOne" :to="item.url" :key="index" v-if="item.level.indexOf(level_id) != -1">
@@ -133,12 +132,6 @@
                 ],    
                 listFour:[
                     {
-                        text: "游戏记录",
-                        icon: "iconfont icon-chart",
-                        url: '/gameRecord',
-                        level: ['1','2','3']
-                    },
-                    {
                         text: "存提款记录",
                         icon: "iconfont icon-qian",
                         url: '/userFund',
@@ -159,7 +152,7 @@
                         level: ['3']
                     },
                     {
-                        text: "彩金赠送",
+                        text: "礼金赠送",
                         icon: "iconfont icon-zengxianhuoke",
                         url: '/agentBonus',
                         level: ['3']
@@ -173,13 +166,7 @@
                 ], 
                 listSix:[
                     {
-                        text: "输赢报表",
-                        icon: "iconfont icon-yejibaobiao",
-                        url: '/payoutReport',
-                        level: ['1','2','3']
-                    },
-                    {
-                        text: "佣金报表",
+                        text: "财务报表",
                         icon: "iconfont icon-baobiao",
                         url: '/commissionReport',
                         level: ['1','2','3']
@@ -240,12 +227,6 @@
                         text: "VIP专享",
                         icon: "iconfont icon-VIP",
                         url: '/vipOnly',
-                        level: ['1','2','3']
-                    },
-                    {
-                        text: "帮助中心",
-                        icon: "iconfont icon-lifehelp",
-                        url: '/supportCenter',
                         level: ['1','2','3']
                     },
                 ], 
@@ -342,11 +323,6 @@
     .sponsor h5{
         text-align: center;
         margin-bottom: 12px;
-    }
-    .sponsor img{
-        height: 68px;
-        float: left;
-        margin-top: 8px;
     }
 
     .list{

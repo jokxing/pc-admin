@@ -14,7 +14,7 @@
                             <el-option label="存款" value="1"></el-option>
                             <el-option label="提款" value="2"></el-option>
                             <el-option label="代理存款" value="3"></el-option>
-                            <el-option label="代理彩金" value="4"></el-option>
+                            <el-option label="代理礼金" value="4"></el-option>
                         </el-select>
                     </el-col>
                 </el-form-item>
@@ -73,17 +73,17 @@
                 <el-table-column
                     prop="money"
                     label="金额"
-                    width="150">
+                    width="100">
                 </el-table-column>
                 <el-table-column
                     prop="actname"
                     label="资金类型"
-                    width="150">
+                    width="130">
                 </el-table-column>
                 <el-table-column
                     prop="created_at"
                     label="完成时间"
-                    width="160">
+                    width="180">
                 </el-table-column>
             </el-table>
         </el-row>

@@ -48,18 +48,13 @@
                 v-loading="tableLoading"
                 :default-sort = "{prop: 'real_win_lost', order: 'ascending'}"
                 @sort-change="changeSort">
-                <!-- <el-table-column
-                    type="index"
-                    label="序号"
-                    width="54">
-                </el-table-column> -->
                 <el-table-column
                     prop="user_name"
                     label="会员账号">
                 </el-table-column>
                 <el-table-column
                     prop="ins_win_money"
-                    label="投注盈亏"
+                    label="内容1"
                     sortable='custom'
                     width="110">
                         <template slot-scope="scope">
@@ -69,7 +64,7 @@
                         </template>
                 </el-table-column>
                 <el-table-column
-                    label="红利/返水"
+                    label="内容2"
                     width="128">
                         <template slot-scope="scope">
                             <span>{{ (scope.row.bonus_money + scope.row.agent_bonus + scope.row.user_agent + scope.row.uservip_system + scope.row.bonus_system + scope.row.dpt_bonus_money + scope.row.water_money).toFixed(2) }}</span>
@@ -78,17 +73,17 @@
                 </el-table-column>
                 <el-table-column
                     prop="dpt_bonus_money"
-                    label="存款手续费"
+                    label="内容3"
                     width="120">
                 </el-table-column>
                 <el-table-column
                     prop="game_fee"
-                    label="平台费"
+                    label="内容4"
                     width="96">
                 </el-table-column>
                 <el-table-column
                     prop="real_win_lost"
-                    label="实际盈亏"
+                    label="内容5"
                     sortable='custom'
                     width="110">
                     <template slot-scope="scope">
@@ -107,15 +102,15 @@
                 <el-table-column
                     prop="transfer"
                     sortable='custom'
-                    label="会员代存"
+                    label="内容6"
                     width="110">
                 </el-table-column>
                 <el-table-column
                     label="操作"
                     width="60">
                         <template slot-scope="scope">
-                            <el-tooltip class="item" effect="dark" content="游戏记录" placement="top">
-                                <i class="el-icon-s-order" @click="$router.push('/gameRecord?name=' + scope.row.user_name + '&Start=' + date[0] + '&End=' + date[1])"></i>
+                            <el-tooltip class="item" effect="dark" content="" placement="top">
+                                <i class="el-icon-s-order"></i>
                             </el-tooltip>
                         </template>
                 </el-table-column>
@@ -129,31 +124,31 @@
                             v-show="scope.row.showBonus">
                             <el-table-column
                                 prop="bonus_money"
-                                label="红利">
+                                label="内容2-1">
                             </el-table-column>
                             <el-table-column
                                 prop="agent_bonus"
-                                label="代理彩金">
+                                label="内容2-2">
                             </el-table-column>
                             <el-table-column
                                 prop="user_agent"
-                                label="邀请有奖">
+                                label="内容2-3">
                             </el-table-column>
                             <el-table-column
                                 prop="uservip_system"
-                                label="VIP系统">
+                                label="内容2-4">
                             </el-table-column>
                             <el-table-column
                                 prop="bonus_system"
-                                label="彩金系统">
+                                label="内容2-5">
                             </el-table-column>
                             <el-table-column 
                                 prop="dpt_bonus_money"
-                                label="存款优惠">
+                                label="内容2-6">
                             </el-table-column>
                             <el-table-column 
                                 prop="water_money"
-                                label="返水">
+                                label="内容2-7">
                             </el-table-column>
                         </el-table>
                         <!-- 其它 -->
@@ -163,280 +158,29 @@
                             v-show="scope.row.showOther">
                             <el-table-column
                                 prop="beat_num"
-                                label="注单笔数">
+                                label="其他1">
                             </el-table-column>
                             <el-table-column
                                 prop="beat_money"
-                                label="投注金额">
+                                label="其他2">
                             </el-table-column>
                             <el-table-column
                                 prop="valid_betamt"
-                                label="有效投注">
+                                label="其他3">
                             </el-table-column>
                             <el-table-column
                                 prop="dpt_money"
-                                label="存款金额">
+                                label="其他4">
                             </el-table-column>
                             <el-table-column
                                 prop="wtd_money"
-                                label="取款金额">
+                                label="其他5">
                             </el-table-column>
                         </el-table>
                     </template>
                 </el-table-column>
             </el-table>
             <!-- 小计 -->
-            <el-table
-                ref="SubTable"
-                :data="CountSubtotal"
-                border
-                style="width: 100%"
-                v-show="!tableLoading"
-                v-if="data.user_name == '' && !tableError"
-                :show-header=false>
-                    <el-table-column>
-                        <template slot-scope="scope">
-                            <div>
-                                小计
-                            </div>
-                        </template>
-                    </el-table-column>
-                    <el-table-column
-                        prop="ins_win_money"
-                        width="110">
-                            <template slot-scope="scope">
-                                <span :class="{ 'red': scope.row.ins_win_money < 0, 'green': scope.row.ins_win_money > 0 }">
-                                    {{ scope.row.ins_win_money }}
-                                </span>
-                            </template>
-                    </el-table-column>
-                    <el-table-column
-                        width="128">
-                            <template slot-scope="scope">
-                                <span>{{ (scope.row.bonus_money + scope.row.agent_bonus + scope.row.user_agent + scope.row.uservip_system + scope.row.bonus_system + scope.row.dpt_bonus_money + scope.row.water_money).toFixed(2) }}</span>
-                                <i class="iconfont primary-color" style="float: right;margin-left:6px" :class="{ 'icon-plus': !scope.row.showBonus, 'icon-reduce': scope.row.showBonus }" @click="SubToogleExpand(scope.row, 'bonus')"></i>
-                            </template>
-                    </el-table-column>
-                    <el-table-column
-                        prop="dpt_bonus_money"
-                        width="120">
-                    </el-table-column>
-                    <el-table-column
-                        prop="game_fee"
-                        width="96">
-                    </el-table-column>
-                    <el-table-column
-                        prop="real_win_lost"
-                        width="110">
-                        <template slot-scope="scope">
-                            <span :class="{ 'red': scope.row.real_win_lost < 0, 'green': scope.row.real_win_lost > 0 }">
-                                {{ scope.row.real_win_lost }}
-                            </span>
-                        </template>
-                    </el-table-column>
-                    <el-table-column
-                        width="60">
-                            <template slot-scope="scope">
-                                <i class="iconfont primary-color" :class="{ 'icon-plus': !scope.row.showOther, 'icon-reduce': scope.row.showOther }" @click="SubToogleExpand(scope.row, 'other')"></i>
-                            </template>
-                    </el-table-column>
-                    <el-table-column
-                        prop="transfer"
-                        width="110">
-                    </el-table-column>
-                    <el-table-column width="60"></el-table-column>
-
-                    <el-table-column type="expand" width="1">
-                        <template slot-scope="scope">
-                            <!-- 红利/返水 -->
-                            <el-table
-                                :data="scope.row.countBonusDetail"
-                                border
-                                v-show="scope.row.showBonus">
-                                <el-table-column
-                                    prop="bonus_money"
-                                    label="红利">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="agent_bonus"
-                                    label="代理彩金">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="user_agent"
-                                    label="邀请有奖">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="uservip_system"
-                                    label="VIP系统">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="bonus_system"
-                                    label="彩金系统">
-                                </el-table-column>
-                                <el-table-column 
-                                    prop="dpt_bonus_money"
-                                    label="存款优惠">
-                                </el-table-column>
-                                <el-table-column 
-                                    prop="water_money"
-                                    label="返水">
-                                </el-table-column>
-                            </el-table>
-                            <!-- 其它 -->
-                            <el-table
-                                :data="scope.row.countOtherDetail"
-                                border
-                                v-show="scope.row.showOther">
-                                <el-table-column
-                                    prop="beat_num"
-                                    label="注单笔数">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="beat_money"
-                                    label="投注金额">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="valid_betamt"
-                                    label="有效投注">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="dpt_money"
-                                    label="存款金额">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="wtd_money"
-                                    label="取款金额">
-                                </el-table-column>
-                            </el-table>
-                        </template>
-                    </el-table-column>
-            </el-table>
-            <!-- 总计 -->
-            <el-table
-                ref="TotalTable"
-                :data="CountTotal"
-                border
-                style="width: 100%"
-                v-show="!tableLoading"
-                v-if="data.user_name == '' && !tableError"
-                :show-header=false>
-                    <el-table-column>
-                        <template slot-scope="scope">
-                            <div>
-                                总计
-                            </div>
-                        </template>
-                    </el-table-column>
-                    <el-table-column
-                        prop="ins_win_money"
-                        width="110">
-                            <template slot-scope="scope">
-                                <span :class="{ 'red': scope.row.ins_win_money < 0, 'green': scope.row.ins_win_money > 0 }">
-                                    {{ scope.row.ins_win_money }}
-                                </span>
-                            </template>
-                    </el-table-column>
-                    <el-table-column
-                        width="128">
-                            <template slot-scope="scope">
-                                <span>{{ (scope.row.bonus_money + scope.row.agent_bonus + scope.row.user_agent + scope.row.uservip_system + scope.row.bonus_system + scope.row.dpt_bonus_money + scope.row.water_money).toFixed(2) }}</span>
-                                <i class="iconfont primary-color" style="float: right;margin-left:6px" :class="{ 'icon-plus': !scope.row.showBonus, 'icon-reduce': scope.row.showBonus }" @click="TotalToogleExpand(scope.row, 'bonus')"></i>
-                            </template>
-                    </el-table-column>
-                    <el-table-column
-                        prop="dpt_bonus_money"
-                        width="120">
-                    </el-table-column>
-                    <el-table-column
-                        prop="game_fee"
-                        width="96">
-                    </el-table-column>
-                    <el-table-column
-                        prop="real_win_lost"
-                        width="110">
-                        <template slot-scope="scope">
-                            <span :class="{ 'red': scope.row.real_win_lost < 0, 'green': scope.row.real_win_lost > 0 }">
-                                {{ scope.row.real_win_lost }}
-                            </span>
-                        </template>
-                    </el-table-column>
-                    <el-table-column
-                        width="60">
-                            <template slot-scope="scope">
-                                <i class="iconfont primary-color" :class="{ 'icon-plus': !scope.row.showOther, 'icon-reduce': scope.row.showOther }" @click="TotalToogleExpand(scope.row, 'other')"></i>
-                            </template>
-                    </el-table-column>
-                    <el-table-column
-                        prop="transfer"
-                        width="110">
-                    </el-table-column>
-                    <el-table-column width="60"></el-table-column>
-
-                    <el-table-column type="expand" width="1">
-                        <template slot-scope="scope">
-                            <!-- 红利/返水 -->
-                            <el-table
-                                :data="scope.row.countBonusDetail"
-                                border
-                                v-show="scope.row.showBonus">
-                                <el-table-column
-                                    prop="bonus_money"
-                                    label="红利">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="agent_bonus"
-                                    label="代理彩金">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="user_agent"
-                                    label="邀请有奖">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="uservip_system"
-                                    label="VIP系统">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="bonus_system"
-                                    label="彩金系统">
-                                </el-table-column>
-                                <el-table-column 
-                                    prop="dpt_bonus_money"
-                                    label="存款优惠">
-                                </el-table-column>
-                                <el-table-column 
-                                    prop="water_money"
-                                    label="返水">
-                                </el-table-column>
-                            </el-table>
-                            <!-- 其它 -->
-                            <el-table
-                                :data="scope.row.countOtherDetail"
-                                border
-                                v-show="scope.row.showOther">
-                                <el-table-column
-                                    prop="beat_num"
-                                    label="注单笔数">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="beat_money"
-                                    label="投注金额">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="valid_betamt"
-                                    label="有效投注">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="dpt_money"
-                                    label="存款金额">
-                                </el-table-column>
-                                <el-table-column
-                                    prop="wtd_money"
-                                    label="取款金额">
-                                </el-table-column>
-                            </el-table>
-                        </template>
-                    </el-table-column>
-            </el-table>
         </el-row>
 
         <!-- 分页 -->

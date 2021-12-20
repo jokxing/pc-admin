@@ -1,6 +1,17 @@
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const productionGzipExtensions = ['js', 'css'];
 const isProduction = process.env.NODE_ENV === 'production';
+const path = require("path");
+
+let mode = process.env.NODE_ENV; //当前启动模式
+ 
+const IS_PROD = ['production', 'prod'].includes(mode); //判断是否是生产模式
+const NEED_MOCK = ['development', 'serve'].includes(mode);
+const apiMock = require('mocker-api');
+const resolve = (dir) => {
+  return path.join(__dirname, dir);
+}
+
 const cdn = {
     css: [
         './css/element-ui.css'
@@ -69,12 +80,16 @@ module.exports = {
             errors:false
         },
         open: process.platform === 'darwin',
-        host: 'www.bm_admin.com',
+        host: 'www.a_admin.com',
         port: 80,
         https: false,
         hotOnly: false,
-        proxy: 'https://www.bmagent3.com', // 设置代理http://agentapi.ba666.net
-        before: app => {}
+        proxy: '', 
+        before(app){
+            if (NEED_MOCK) {
+              apiMock(app, resolve('./mock/index.js'))
+            }
+          }
     },
     // 第三方插件配置
     pluginOptions: {

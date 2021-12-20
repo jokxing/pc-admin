@@ -40,7 +40,7 @@
         data() {
             return {
                 noticeLoading: true,
-                tabs:['平台公告','会员讯息','体育公告','真人公告','彩票公告'],
+                tabs:['平台公告','会员讯息','讯息公告','注册公告','代理公告'],
                 num: 0,
                 type: "平台公告",
                 tableData: [],

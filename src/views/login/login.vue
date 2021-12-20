@@ -5,7 +5,7 @@
         <div class="login_banner">
             <div class="login_banner_inner fix">
                 <div class="kuli">
-                    <img src="../../assets/img/login_left.png">
+                    <img src="../../assets/img/box_img.png">
                 </div>
                 
                 <div class="login_form">
@@ -103,86 +103,64 @@
                 </div>
                 
                 <div class="cl">
-                    <img src="../../assets/img/login_right.png">
+                    <img src="../../assets/img/box_img.png">
                 </div>
             </div>
         </div>
 
         <div class="login_main">
             <img src="../../assets/img/login_title1.png" class="login_title">
-            <h4>最安全，最全面的专业系统推广</h4>
+            <h4>小标题小标题小标题</h4>
             <el-row class="extension">
                 <ul class="fix">
                     <li>
                         <img src="../../assets/img/extension_img1.png" width="263">
-                        <h3>支持全渠道推广</h3>
-                        <p>提供全面丰富的图片，视频推广素材<br/>支持分发全网每个角落</p>
+                        <h3>标题标题标题</h3>
+                        <p>小标题小标题小标题小标题小标题小标题<br/>小标题小标题小标题</p>
                     </li>
                     <li>
                         <img src="../../assets/img/extension_img2.png" width="309">
-                        <h3>半月成为推广达人</h3>
-                        <p>专业团队24小时提供专业指导<br>零基础也可快速成为推广达人</p>
+                        <h3>标题标题标题</h3>
+                        <p>小标题小标题小标题小标题小标题小标题<br/>小标题小标题小标题</p>
                     </li>
                     <li>
                         <img src="../../assets/img/extension_img3.png" width="263">
-                        <h3>最安全数据报表</h3>
-                        <p>全方位分析佣金组成，会员游戏情况<br/>对您的会员全盘洞悉</p>
+                        <h3>标题标题标题</h3>
+                        <p>小标题小标题小标题小标题小标题小标题<br/>小标题小标题小标题</p>
                     </li>
                 </ul>
             </el-row>
             <el-row class="extension" style="margin-bottom: 153px">
                 <ul class="fix">
                     <li>
-                        <img src="../../assets/img/extension_img4.png" width="263">
-                        <h3>更专业数据统筹</h3>
-                        <p>提供全面丰富的图片，视频推广素材<br/>支持分发全网每个角落</p>
+                        <img src="../../assets/img/extension_img1.png" width="263">
+                        <h3>标题标题标题</h3>
+                        <p>小标题小标题小标题小标题小标题小标题<br/>小标题小标题小标题</p>
                     </li>
                     <li>
-                        <img src="../../assets/img/extension_img5.png" width="309">
-                        <h3>更便捷娱乐体验</h3>
-                        <p>让您随时随地，娱乐投注随心所欲！<br>24小时在线客服提供最贴心、最优质的服务。</p>
+                        <img src="../../assets/img/extension_img2.png" width="309">
+                        <h3>标题标题标题</h3>
+                        <p>小标题小标题小标题小标题小标题小标题<br/>小标题小标题小标题</p>
                     </li>
                     <li>
-                        <img src="../../assets/img/extension_img6.png" width="263">
-                        <h3>更快速技术支持</h3>
-                        <p>技术自主研发，真正做到极速存、取、转。<br/>独家网络优化技术，为您提供一流的游戏体验。</p>
+                        <img src="../../assets/img/extension_img3.png" width="263">
+                        <h3>标题标题标题</h3>
+                        <p>小标题小标题小标题小标题小标题小标题<br/>小标题小标题小标题</p>
                     </li>
                 </ul>
             </el-row>
 
-            <img src="../../assets/img/login_title2.png" class="login_title">
-            <h4>千万玩家每日在线精彩博弈</h4>
-            <el-row class="mach_live">
-                <h3>全球精彩赛事直播</h3>
-                <p>高清现场转播，全球同步<br/>赛果公平公正，不容错过</p>
-                <img src="../../assets/img/play_game_img0.png" width="1200">
-            </el-row>
-            <el-row class="play_game">
-                <ul>
-                    <li>
-                        <h3>博门棋牌  劲爆博弈</h3>
-                        <p>精美游戏画质，模拟真实随机发牌<br/>百万玩家即时在线，让您乐在其中</p>
-                        <img src="../../assets/img/play_game_img1.png" width="605">
-                    </li>
-                    <li>
-                        <h3>真人视讯  互动娱乐 </h3>
-                        <p>视讯盛宴饕餮，真人荷官互动娱乐在线直播平台，<br/>让玩家游戏的同时，观赏美女主播表演、参与互动游戏。</p>
-                        <img src="../../assets/img/play_game_img2.png" width="558">
-                    </li>
-                </ul>
-            </el-row>
-
-            <img src="../../assets/img/login_title3.png" class="login_title">
-            <h4>每月佣金奖池超300，000，000，00</h4>
+            <img src="../../assets/img/login_title1.png" class="login_title">
+            <h4>小标题小标题小标题</h4>
             <el-row class="guessing_competition">
                 <ul>
                     <li>
-                        <h5>业内最高分佣比例55%</h5>
-                        <p>零门槛进驻，与您共盈共赢</p>
+                        <h5>标题标题标题%</h5>
+                        <p>小标题小标题小标题</p>
                     </li>
                     <li>
-                        <h5>稳定的财务系统支持</h5>
-                        <p>信誉平台，快速稳定到账</p>
+                        <h5>标题标题标题</h5>
+                        <p>小标题小标题小标题</p>
                     </li>
                 </ul>
             </el-row>
@@ -214,7 +192,7 @@
                     }
                 ],
                 num:0,
-                appId: "2095005492",
+                appId: "123456789",
                 // 登录
                 username: "",
                 password: "",

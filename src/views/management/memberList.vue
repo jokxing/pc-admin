@@ -14,24 +14,23 @@
                         <el-input v-model="Mobile" placeholder="手机号" maxlength="11"></el-input>
                     </el-col>
                     <el-col :span="6">
-                        <el-select v-model="level_id" placeholder="玩家层级">
+                        <el-select v-model="level_id" placeholder="会员层级">
                             <el-option label="所有等级" value=""></el-option>
-                            <el-option label="倔强铜" value="1"></el-option>
-                            <el-option label="无畏银V1" value="2"></el-option>
-                            <el-option label="无畏银V2" value="3"></el-option>
-                            <el-option label="热血金V1" value="4"></el-option>
-                            <el-option label="热血金V2" value="5"></el-option>
-                            <el-option label="宝藏铂V1" value="6"></el-option>
-                            <el-option label="宝藏铂V2" value="7"></el-option>
-                            <el-option label="锦鲤钻V1" value="8"></el-option>
-                            <el-option label="锦鲤钻V2" value="9"></el-option>
-                            <el-option label="皇帝冠V1" value="10"></el-option>
-                            <el-option label="皇帝冠V2" value="11"></el-option>
+                            <el-option label="1级" value="1"></el-option>
+                            <el-option label="2级" value="2"></el-option>
+                            <el-option label="3级" value="3"></el-option>
+                            <el-option label="4级" value="4"></el-option>
+                            <el-option label="5级" value="5"></el-option>
+                            <el-option label="6级" value="6"></el-option>
+                            <el-option label="7级" value="7"></el-option>
+                            <el-option label="8级" value="8"></el-option>
+                            <el-option label="9级" value="9"></el-option>
+                            <el-option label="10级" value="10"></el-option>
                         </el-select>
                     </el-col>
                     <el-col :span="6">
                         <el-select v-model="status" placeholder="状态" style="width: 88%">
-                            <el-option label="请选择玩家状态" value=""></el-option>
+                            <el-option label="请选择会员状态" value=""></el-option>
                             <el-option label="静止户" value="11"></el-option>
                             <el-option label="正常户" value="1"></el-option>
                             <el-option label="停权户" value="0"></el-option>
@@ -82,17 +81,12 @@
                     <el-table-column
                         prop="name"
                         label="账号"
-                        width="98">
+                        width="70">
                     </el-table-column>
                     <el-table-column
                         prop="account"
                         label="姓名"
-                        width="54">
-                    </el-table-column>
-                    <el-table-column
-                        prop="mobile"
-                        label="手机号"
-                        width="108">
+                        width="70">
                     </el-table-column>
                     <el-table-column
                         v-if="agentLevel != 3"
@@ -130,8 +124,8 @@
                     </el-table-column>
                     <el-table-column
                         prop="ins_win"
-                        label="总输赢"
-                        width="96">
+                        label="总盈亏"
+                        width="110">
                         <template slot-scope="scope">
                             <span :class="{ red: scope.row.ins_win < 0, green: scope.row.ins_win > 0}">{{ scope.row.ins_win }}</span>
                         </template>
@@ -159,18 +153,13 @@
                     </el-table-column>
                     <el-table-column
                         v-if="agentLevel == 3"
-                        label="操作"
-                        width="116">
+                        label="操作">
                         <template slot-scope="scope">
-                            <el-tooltip class="item" effect="dark" content="玩家代存" placement="top">
+                            <el-tooltip class="item" effect="dark" content="会员代存" placement="top">
                                 <i class="iconfont icon-cunkuan1" @click="operation('会员代存',scope.row)"></i>
                             </el-tooltip>
-                            <el-tooltip class="item" effect="dark" content="彩金赠送" placement="top">
-                                <i class="iconfont icon-ai-profit" @click="operation('彩金赠送',scope.row)"></i>
-                            </el-tooltip>
-                            <br>
-                            <el-tooltip class="item" effect="dark" content="游戏记录" placement="bottom">
-                                <i class="el-icon-s-order" @click="$router.push('/gameRecord?name=' + scope.row.name)"></i>
+                            <el-tooltip class="item" effect="dark" content="礼金赠送" placement="top">
+                                <i class="iconfont icon-ai-profit" @click="operation('礼金赠送',scope.row)"></i>
                             </el-tooltip>
                             <el-tooltip class="item" effect="dark" content="存提款记录" placement="bottom">
                                 <i class="iconfont icon-qian" style="margin-top:6px" @click="$router.push('/userFund?name=' + scope.row.name)"></i>
@@ -269,6 +258,7 @@
                 }
                 this.tableLoading = true;
                 MemberListApi(data).then(res => {
+                    console.log(res.data.message.Data)
                     _this.tableLoading = false;
                     _this.tableData = res.data.message.Data;
                     _this.total = res.data.message.Total;
@@ -377,7 +367,7 @@
                             this.showPay = true
                         }
                     }
-                    if(type == "彩金赠送"){
+                    if(type == "礼金赠送"){
                         this.$router.push('/agentBonus?name=' + row.name)
                     }
                     if(type == '会员调级'){
