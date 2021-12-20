@@ -1,4 +1,4 @@
-# bf_admin
+# pc_admin
 
 ## Project setup
 ```
